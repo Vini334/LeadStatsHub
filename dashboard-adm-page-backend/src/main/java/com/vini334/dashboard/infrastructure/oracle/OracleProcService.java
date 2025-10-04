@@ -55,6 +55,8 @@ public class OracleProcService {
           body.put("posts", rs.getLong("POSTS_COUNT"));
           body.put("interactions", rs.getLong("INTERACTIONS_COUNT"));
           body.put("likes", rs.getLong("LIKES_COUNT"));
+          body.put("comments", rs.getLong("COMMENTS_COUNT"));
+          body.put("shares", rs.getLong("SHARES_COUNT"));
           body.put("likeRatio", rs.getBigDecimal("LIKE_RATIO"));
           try {
             body.put("error", rs.getString("ERROR_MSG"));
@@ -70,3 +72,4 @@ public class OracleProcService {
   }
   // === END GPT SECTION: call PROC_USER_CONSUMPTION_REPORT ===
 }
+
